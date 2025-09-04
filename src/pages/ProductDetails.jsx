@@ -1,5 +1,4 @@
 import { useParams } from "react-router-dom";
-// import productsData from "../contextAPI/Products";
 import { useProducts } from "../contextAPI/ProductsContext";
 import {  FaStar } from "react-icons/fa";
 import { useDispatch } from "react-redux";
@@ -242,7 +241,6 @@ export default function ProductDetails() {
       </div>
 
 
-
       {/* Related Products */}
       <div className="bg-black text-white p-8">
         <h2 className="text-2xl font-bold mb-6 text-center">Related Products</h2>
@@ -271,8 +269,6 @@ export default function ProductDetails() {
             ))}
         </div>
       </div>
-
-
     </>
   );
 }
