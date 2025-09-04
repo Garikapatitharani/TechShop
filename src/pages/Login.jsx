@@ -10,7 +10,7 @@ export default function Login({ setShowLogin, setShowSignup }) {
             <p className="text-white ">
               <span>New to Tech-Shop?</span>
               <button
-                className="text-white px-2"
+                className="text-white font-semibold px-2 hover:text "
                 onClick={() => {
                   setShowLogin(false);
                   setShowSignup(true);
