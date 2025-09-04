@@ -46,7 +46,7 @@ function CartPage() {
       ) : (
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {/* LEFT SIDE - Cart Items */}
+          {/* Cart Items */}
           <div className="md:col-span-2 space-y-5">
             {cartItems.map((item) => (
               <div
@@ -61,20 +61,15 @@ function CartPage() {
                   />
                   <div>
                     <h2 className="text-gray-500" >{item.info}
-                      {/* <span> */}
                         <button
                           onClick={() => dispatch(removeFromCart(item.id))}
-                          className="absolute top-7 right-6 "
-                        >
+                          className="absolute top-7 right-6 " >
                           <IoTrashOutline size={20} />
                         </button>
-                      {/* </span> */}
                     </h2>
                     <p>
                       <span className="text-white font-bold">₹{item.finalPrice}</span>
-                    <span className="line-through px-5 text-gray-500">
-                      ₹{item.originalPrice}
-                    </span>
+                      <span className="line-through px-5 text-gray-500">₹{item.originalPrice}</span>
                     </p>
                   </div>
                 </div>
@@ -93,12 +88,12 @@ function CartPage() {
                     >
                       +
                     </button>
-                  </div>
+                </div>
               </div>
             ))}
           </div>
 
-          {/* RIGHT SIDE - Cart Summary */}
+          {/* Cart Summary */}
           <div className="bg-gray-950 p-6 rounded-lg h-fit">
             <h2 className="text-2xl font-bold mb-4">
               Order Summary ({cartItems.length} items)
@@ -126,7 +121,7 @@ function CartPage() {
               <span>₹{totalFinal}</span>
             </p>
 
-             <Link to='/' className="text-white">
+            <Link to='/' className="text-white">
             <button className="mt-2 bg-red-600 w-full p-2">
               Checkout 
             </button>
