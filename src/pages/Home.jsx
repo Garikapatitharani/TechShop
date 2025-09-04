@@ -176,7 +176,6 @@ export default function Home() {
           <li><Link to='/neckbands' className="hover:bg-red-500 text-white no-underline rounded p-2">Neckbands</Link></li>
         </ul>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 p-6 bg-black">
-          {/* First 11 products */}
           {productsData.slice(0, 11).map((product) => (
             <Link
               key={product.id}
