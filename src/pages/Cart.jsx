@@ -51,13 +51,13 @@ function CartPage() {
             {cartItems.map((item) => (
               <div
                 key={item.id}
-                className=" relative border-b border-gray-700 justify-between items-center p-4 bg-gray-950 rounded-lg"
+                className=" relative border-b border-gray-700 h-60 w-full justify-between items-center p-4 bg-gray-950 rounded-lg"
               >
                 <div className="flex items-center gap-4">
                   <img
                     src={item.images[0]}
                     alt={item.title}
-                    className="w-25 h-24 object-contain rounded-md"
+                    className="w-1/4 h-30 mt-4 object-contain rounded-md"
                   />
                   <div>
                     <h2 className="text-gray-500" >{item.info}

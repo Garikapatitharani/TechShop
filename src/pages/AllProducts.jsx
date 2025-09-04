@@ -24,7 +24,6 @@ export default function AllProducts() {
     }
   };
 
-  // Filtering logic
   const filteredProducts = productsData.filter((p) => {
     const brandMatch =
       selectedBrand.length === 0 || selectedBrand.includes(p.brand);
@@ -58,7 +57,7 @@ export default function AllProducts() {
     <div className="bg-black min-h-screen p-6 flex">
       {/* ===== Left Sidebar ===== */}
       <div className="w-64 bg-[#111] text-white p-4 rounded-lg mr-6">
-        
+
         <div className="pt-4">
           <h2 className="font-bold mb-2">Sort By</h2>
           <hr className="mb-2" />
@@ -119,6 +118,7 @@ export default function AllProducts() {
           </div>
         </div>
 
+
         {/* Category Filter */}
         <div className="mb-6">
           <h3 className="font-semibold mb-2">Category</h3>
@@ -139,6 +139,7 @@ export default function AllProducts() {
           </div>
         </div>
 
+
         {/* Price Filter */}
         <div>
           <h3 className="font-semibold mb-2">Price</h3>
@@ -157,22 +158,20 @@ export default function AllProducts() {
 
 
 
-
-
+      {/* Products */}
       <div >
         <h1 className="text-white text-center text-2xl mb-6">All Products</h1>
-
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
           {sortedProducts.map((product) => (
             <Link
               key={product.id}
               to={`/product/${product.id}`}
-              className="border rounded-lg p-4 shadow-lg hover:shadow-xl"
-            >
+              className="border rounded-lg p-4 shadow-lg hover:shadow-xl"  >
               <img
                 src={product.images[0]}
                 alt={product.title}
-                className="w-full h-40 object-cover rounded-md"
+                className="w-3/4 h-40 object-cover rounded-md 
+                transform transition-transform duration-300 hover:scale-75 "
               />
               <h2 className="text-lg text-white font-semibold mt-2">
                 {product.title}
@@ -183,7 +182,6 @@ export default function AllProducts() {
                 ₹{product.originalPrice}
               </p>
 
-              {/* ⭐ Red Stars */}
               <div className="flex items-center gap-1 mt-2">
                 {Array.from({ length: Math.round(product.rateCount || 0) }).map(
                   (_, i) => (
@@ -195,7 +193,6 @@ export default function AllProducts() {
                 </span>
               </div>
               <button className="bg-red-500 text-white p-2 mt-2 " onClick={() => dispatch(addToCart(product))}>Add to Cart</button>
-
             </Link>
           ))}
         </div>

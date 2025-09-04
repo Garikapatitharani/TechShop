@@ -185,7 +185,7 @@ export default function Home() {
               <img
                 src={product.images[0]}
                 alt={product.title}
-                className="w-full h-40 object-cover rounded-md"
+                className="w-3/4 h-50 object-cover rounded-md  transform transition-transform duration-300 hover:scale-75"
               />
               <h2 className="text-lg text-white font-semibold mt-2">{product.title}</h2>
               <p className="text-white">{product.info}</p>
