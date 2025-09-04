@@ -44,7 +44,7 @@ export default function Header() {
     e.preventDefault();
   };
 
-  // Dropdown hover handlers
+  // Dropdown popup
   const handleMouseEnter = () => {
     if (closeTimerRef.current) {
       clearTimeout(closeTimerRef.current);
@@ -56,7 +56,7 @@ export default function Header() {
   const handleMouseLeave = () => {
     closeTimerRef.current = setTimeout(() => {
       setUserDropdownOpen(false);
-    }, 500); 
+    }, 500);
   };
 
   return (
@@ -113,8 +113,9 @@ export default function Header() {
           )}
         </div>
 
+        {/* Icons */}
         <ul className="flex gap-6 mt-2 items-center">
-          {/* Search Icon */}
+          {/* Search */}
           <li>
             <button onClick={() => setShowSearch(!showSearch)}>
               <CiSearch size={28} className="mt-2" title="search" />
@@ -149,10 +150,9 @@ export default function Header() {
             {/* Dropdown */}
             <div
               className={`absolute right-0 top-full mt-2 w-65 bg-white text-black text-sm rounded-lg shadow-lg transition-all duration-200 z-50
-                ${
-                  userDropdownOpen
-                    ? "opacity-100 visible translate-y-0"
-                    : "opacity-0 invisible translate-y-2"
+                ${userDropdownOpen
+                  ? "opacity-100 visible translate-y-0"
+                  : "opacity-0 invisible translate-y-2"
                 }`}
             >
               <div className="px-2 w-full h-50 bg-black border text-white">
@@ -167,7 +167,7 @@ export default function Header() {
                 >
                   Login / Signup
                 </button>
-                <hr/>
+                <hr />
                 <p className="text-gray-400">Please Login</p>
               </div>
             </div>
@@ -183,7 +183,7 @@ export default function Header() {
               className="absolute top-3 right-3 text-white hover:text-red-500"
               onClick={() => setShowLogin(false)}
             >
-              <IoIosClose size={30}  />
+              <IoIosClose size={30} />
             </button>
             <Login setShowLogin={setShowLogin} setShowSignup={setShowSignup} />
           </div>

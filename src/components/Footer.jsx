@@ -67,7 +67,7 @@ export default function Footer() {
               2025 | All Rights Reserved  &copy;.
             </p>
             <ul className="flex gap-7 md:mt-0">
-              {/* Facebook */}
+              
               <li>
                   <span className="sr-only">Facebook</span>
                   <svg className="hover:text-red-500 cursor-pointer size-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -78,7 +78,7 @@ export default function Footer() {
                     />
                   </svg>
               </li>
-               {/* Twitter */}
+
               <li>
                   <span className="sr-only">Twitter</span>
                   <svg className="hover:text-red-500 cursor-pointer size-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -87,7 +87,7 @@ export default function Footer() {
                     />
                   </svg>
               </li>
-              {/* Instagram */}
+
               <li>
                   <svg className="hover:text-red-500 cursor-pointer size-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                     <path
@@ -98,7 +98,6 @@ export default function Footer() {
                   </svg>
               </li>
              
-              {/* GitHub */}
               <li>
                   <span className=" sr-only">GitHub</span>
                   <svg className="hover:text-red-500 cursor-pointer size-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">

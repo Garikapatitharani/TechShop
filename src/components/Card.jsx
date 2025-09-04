@@ -23,7 +23,6 @@ function ProductCard({ product }) {
         <p className="text-white">{product.info}</p>
         <p className="font-bold text-white">₹{product.finalPrice}</p>
         <p className="line-through text-white text-sm"> ₹{product.originalPrice}</p>
-        {/* ⭐ Red Stars */}
         <div className="flex items-center gap-1 mt-2">
           {Array.from({ length: Math.round(product.rateCount || 0) }).map(
             (_, i) => (
@@ -33,7 +32,7 @@ function ProductCard({ product }) {
         </div>
         <button
           onClick={(e) => {
-            e.preventDefault(); // prevent Link navigation
+            e.preventDefault(); 
             handleAddToCart(product);
           }}
           className={`mt-6 px-6 py-2 rounded-lg transition-colors ${added === product.id
