@@ -125,7 +125,6 @@ export default function Home() {
         </h1>
 
         <div className="flex items-center justify-center gap-4 bg-black py-6">
-          {/* Products row */}
           <div className="flex items-center gap-6">
             {getVisibleProducts().map((product, index) => {
               const middleIndex = Math.floor(5 / 2);
@@ -225,7 +224,7 @@ export default function Home() {
 
 
 
-      {/* Advantages card */}
+      {/* Advantages */}
 
       <h1 className="bg-black text-white text-center mb-0 pt-4">Our Advantages</h1>
       <div className="grid grid-cols-1 md:grid-cols-4 h-40 gap-6 bg-black " >
