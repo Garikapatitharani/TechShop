@@ -61,7 +61,7 @@ export default function Header() {
 
   return (
     <>
-      <div className="fixed top-0 w-full z-50 text-white bg-black flex justify-between items-center h-16 text-xl px-6">
+      <div className="fixed top-0 pt-4 w-full z-50 text-white bg-black flex justify-between items-center h-16 text-xl px-6">
         <Link to="/">
           <h1 className="font-bold text-white">Tech-Shop</h1>
         </Link>

@@ -132,7 +132,7 @@ export default function Home() {
 
       {/* Featured Products */}
       <>
-        <h1 className="text-center bg-black text-white mb-0 pt-2">
+        <h1 className="text-center bg-black text-white mb-0 pt-8">
           Featured Products
         </h1>
 
@@ -178,7 +178,7 @@ export default function Home() {
 
       {/* Products */}
       <div className="bg-black min-h-screen">
-        <h1 className="bg-black text-white text-center mb-0 pt-8 pb-2">Top Products</h1>
+        <h1 className="bg-black text-white text-center mb-0 pt-10 pb-2">Top Products</h1>
         <ul className="flex flex-wrap text-white space-x-40 justify-center mt-4 ">
           <li><Link to='/all-products' className="hover:bg-red-500 text-white p-2 rounded no-underline" >All</Link></li>
           <li><Link to='/headphones' className="hover:bg-red-500 text-white no-underline rounded p-2">HeadPhones </Link></li>
@@ -186,7 +186,7 @@ export default function Home() {
           <li><Link to='/earphones' className="hover:bg-red-500 text-white no-underline rounded p-2">Earphones</Link></li>
           <li><Link to='/neckbands' className="hover:bg-red-500 text-white no-underline rounded p-2">Neckbands</Link></li>
         </ul>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 p-6 bg-black">
+        <div className="pb-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 p-6 bg-black">
           {productsData.slice(0, 11).map((product) => (
             <Link
               key={product.id}
@@ -238,7 +238,7 @@ export default function Home() {
 
       {/* Advantages */}
 
-      <h1 className="bg-gray-950 text-white text-center mb-0 pt-5">Our Advantages</h1>
+      <h1 className="bg-gray-950 text-white text-center mb-0  pt-8">Our Advantages</h1>
       <div className="grid grid-cols-1 md:grid-cols-4 h-45 gap-6 bg-gray-950 " >
         <div className=" flex items-center gap-3 p-3 bg-gray-950" >
           <i ><FaTruck size={28} className="text-red-500 " /></i>
