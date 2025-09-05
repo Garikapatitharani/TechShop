@@ -12,7 +12,7 @@ export default function ProductDetails() {
   const { products } = useProducts();
   const product = products.find((item) => item.id.toString() === id);
   const dispatch = useDispatch();
-  const [added, setAdded] = useState(false);
+  const [addedItems, setAddedItems] = useState({});
   const [activeTab, setActiveTab] = useState("Specifications");
 
   const [selectedImage, setSelectedImage] = useState(product.images[0]);
@@ -33,17 +33,20 @@ export default function ProductDetails() {
   const discount = product.originalPrice - product.finalPrice;
   const percentage = Math.round((discount / product.originalPrice) * 100);
 
-  const handleAddToCart = () => {
-    dispatch(addToCart(product));
-    setAdded(true);
-    setTimeout(() => setAdded(false), 1500);
+  const handleAddToCart = (prod) => {
+    dispatch(addToCart(prod));
+    setAddedItems((prev) => ({ ...prev, [prod.id]: true }));
+
+    setTimeout(() => {
+      setAddedItems((prev) => ({ ...prev, [prod.id]: false }));
+    }, 1500);
   };
 
   return (
     <>
 
       {/* Product Section */}
-      <div className="p-4 md:p-6 mt-6 flex flex-col lg:flex-row  bg-black gap-6 lg:gap-8">
+      <div className="p-4 pt-5 md:p-6 mt-6 flex flex-col lg:flex-row  bg-black gap-6 lg:gap-8">
         {/* Product Images */}
         <div className="w-full lg:w-1/2 flex flex-col sm:flex-row gap-4">
           <div className="flex sm:flex-col gap-2 sm:gap-4 overflow-x-auto sm:overflow-y-auto">
@@ -87,7 +90,6 @@ export default function ProductDetails() {
           </div>
           <p className="text-green-400 text-base sm:text-lg mt-2">
             You save: ₹{discount}  ({percentage}%)
-
             <span className="inline-block bg-green-500 text-white rounded px-2 sm:px-3 py-1 ml:2 sm:ml-4">
               ✔ In Stock
             </span>
@@ -103,11 +105,12 @@ export default function ProductDetails() {
           </div>
           <hr />
           <button
-            onClick={handleAddToCart}
-            className={`px-6 py-2 mt-2 sm:mt-6 w-full sm:w-2/3 md:w-1/2 rounded-lg transition-colors ${added ? "bg-green-600 text-white hover:bg-green-700" : "bg-red-500 text-white "
-              }text-white`}
+            onClick={()=> handleAddToCart(product)}
+            className={`px-6 py-2 mt-2 sm:mt-6 w-full sm:w-2/3 md:w-1/2 rounded-lg transition-colors ${
+              addedItems [product.id] ? "bg-green-600 text-white hover:bg-green-700" : "bg-red-500 text-white "
+              }`}
           >
-            {added ? "Added" : "Add to Cart"}
+            {addedItems[product.id] ? "Added" : "Add to Cart"}
           </button>
         </div>
       </div>
@@ -129,7 +132,7 @@ export default function ProductDetails() {
           ))}
         </ul>
 
-        <div className="bg-black rounded-lg w-full max-w-5xl p-4 sm:p-6">
+        <div className="bg-black rounded-lg w-full max-w-8xl p-4 sm:p-6">
           {activeTab === "Specifications" && (
             <div>
               <ul className="space-y-3 text-sm sm:text-base">
@@ -251,29 +254,31 @@ export default function ProductDetails() {
           {products
             .filter((p) => p.category === product.category && p.id !== product.id)
             .map((related) => (
-              <Link
+              <div
                 key={related.id}
                 to={`/product/${related.id}`}
-                className="border border-gray-700 rounded-lg p-4 hover:shadow-lg transition"
+                className="border border-gray-700  rounded-lg p-4 hover:shadow-lg transition"
               >
-                <img
-                  src={related.images[0]}
-                  alt={related.title}
-                  className="w-full h-32 sm:h-40 object-contain"
-                />
-                <h3 className="text-base sm:text-lg font-semibold mt-2">{related.title}</h3>
+                <Link to={`/product/${related.id}`}>
+                  <img
+                    src={related.images[0]}
+                    alt={related.title}
+                    className="w-full h-32 sm:h-40  object-contain"
+                  />
+                  <h3 className="text-base text-white sm:text-lg font-semibold mt-2">{related.title}</h3>
+                </Link>
                 <p className="text-gray-400 text-sm sm:text-base">{related.info}</p>
                 <hr />
                 <p className="text-white font-bold text-2xl mt-1">₹{related.finalPrice}
                   <span className="text-gray-500 text-sm sm:text-xl ml-2 line-through">₹{related.originalPrice}</span> </p>
                 <button
-                  onClick={handleAddToCart}
-                  className={`px-6 py-2 mt-2 sm:mt-6 w-full sm:w-2/3 md:w-1/2 rounded-lg transition-colors ${added ? "bg-green-600 text-white hover:bg-green-700" : "bg-red-500 text-white "
+                  onClick={()=> handleAddToCart(related)}
+                  className={`px-6 py-2 mt-2 sm:mt-6 w-full sm:w-2/3 md:w-1/2 rounded-lg transition-colors ${addedItems [related.id] ? "bg-green-600 text-white hover:bg-green-700" : "bg-red-500 text-white "
                     }text-white`}
                 >
-                  {added ? "Added" : "Add to Cart"}
+                  {addedItems[related.id] ? "Added" : "Add to Cart"}
                 </button>
-              </Link>
+              </div>
             ))}
         </div>
       </div>
