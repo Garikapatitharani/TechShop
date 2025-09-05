@@ -167,14 +167,14 @@ export default function Home() {
       {/* Products */}
       <div className="bg-black min-h-screen">
         <h1 className="bg-black text-white text-center mb-0 pt-8 pb-2">Top Products</h1>
-        <ul className="flex text-white gap-6 mx-106 mt-4 ">
+        <ul className="flex flex-wrap text-white gap-4 justify-center mt-4 ">
           <li><Link to='/all-products' className="hover:bg-red-500 text-white p-2 rounded no-underline" >All</Link></li>
           <li><Link to='/headphones' className="hover:bg-red-500 text-white no-underline rounded p-2">HeadPhones </Link></li>
           <li><Link to='/earbuds' className="hover:bg-red-500 text-white no-underline rounded p-2">Earbuds</Link></li>
           <li><Link to='/earphones' className="hover:bg-red-500 text-white no-underline rounded p-2">Earphones</Link></li>
           <li><Link to='/neckbands' className="hover:bg-red-500 text-white no-underline rounded p-2">Neckbands</Link></li>
         </ul>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 p-6 bg-black">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6 p-6 bg-black">
           {productsData.slice(0, 11).map((product) => (
             <Link
               key={product.id}
@@ -183,7 +183,7 @@ export default function Home() {
               <img
                 src={product.images[0]}
                 alt={product.title}
-                className="w-3/4 h-50 object-cover rounded-md  transform transition-transform duration-300 hover:scale-75"
+                className="w-full h-48 object-contain rounded-md transform transition-transform duration-300 hover:scale-75"
               />
               <h2 className="text-lg text-white font-semibold mt-2">{product.title}</h2>
               <p className="text-white">{product.info}</p>

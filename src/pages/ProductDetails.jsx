@@ -42,9 +42,9 @@ export default function ProductDetails() {
   return (
     <>
       {/* Product Section */}
-      <div className="p-6 mt-10 flex bg-black gap-8">
+      <div className="p-6 mt-10 flex flex-wrap bg-black gap-8">
         {/* Product Images */}
-        <div className="w-1/2 flex gap-4">
+        <div className="w-full md:w-1/2 flex flex-1 gap-4">
           <div className="flex flex-col gap-4">
             {product.images.map((img, index) => (
               <img
@@ -61,13 +61,13 @@ export default function ProductDetails() {
             <img
               src={selectedImage}
               alt={product.title}
-              className="w-full h-full rounded"
+              className="w-full h-auto max-h-[500px] object-contain rounded"
             />
           </div>
         </div>
 
         {/* Product Info */}
-        <div className="text-white my-4 w-2/4 px-30">
+        <div className="w-full md:w-1/2 text-white">
           <h1 className="text-3xl font-bold">{product.title}</h1>
           <p className="text-lg">{product.info}</p>
           <div className="flex items-center gap-1 mt-2">
@@ -89,7 +89,7 @@ export default function ProductDetails() {
               {" "}
               ({percentage}%)
             </span>
-            <span className="mx-20 bg-green-500 text-white rounded p-2 cursor-pointer">
+            <span className="inline-block bg-green-500 text-white rounded p-2 mx-4 cursor-pointer mt-2 md:mt-0">
               ✔ In Stock
             </span>
           </p>
@@ -103,7 +103,7 @@ export default function ProductDetails() {
           <hr />
           <button
             onClick={handleAddToCart}
-            className={`px-6 py-2 my-4 rounded-lg transition-colors ${added
+            className={`px-6 py-2 md:w-1/2 my-4 rounded-lg transition-colors ${added
               ? "bg-green-600 text-white hover:bg-green-700"
               : "bg-red-500 text-white "
               }`}
