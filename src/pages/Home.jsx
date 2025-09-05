@@ -179,7 +179,7 @@ export default function Home() {
       {/* Products */}
       <div className="bg-black min-h-screen">
         <h1 className="bg-black text-white text-center mb-0 pt-8 pb-2">Top Products</h1>
-        <ul className="flex flex-wrap text-white gap-4 justify-center mt-4 ">
+        <ul className="flex flex-wrap text-white space-x-40 justify-center mt-4 ">
           <li><Link to='/all-products' className="hover:bg-red-500 text-white p-2 rounded no-underline" >All</Link></li>
           <li><Link to='/headphones' className="hover:bg-red-500 text-white no-underline rounded p-2">HeadPhones </Link></li>
           <li><Link to='/earbuds' className="hover:bg-red-500 text-white no-underline rounded p-2">Earbuds</Link></li>
@@ -238,30 +238,30 @@ export default function Home() {
 
       {/* Advantages */}
 
-      <h1 className="bg-black text-white text-center mb-0 pt-5">Our Advantages</h1>
-      <div className="grid grid-cols-1 md:grid-cols-4 h-45 gap-6 bg-black " >
-        <div className=" flex items-center gap-3 p-3 bg-black" >
+      <h1 className="bg-gray-950 text-white text-center mb-0 pt-5">Our Advantages</h1>
+      <div className="grid grid-cols-1 md:grid-cols-4 h-45 gap-6 bg-gray-950 " >
+        <div className=" flex items-center gap-3 p-3 bg-gray-950" >
           <i ><FaTruck size={28} className="text-red-500 " /></i>
           <div>
             <h5 className="text-white">Express Delivery</h5>
             <p className="text-gray-500">Ships in 24 Hours</p>
           </div>
         </div>
-        <div className="flex items-center gap-3 p-3 bg-black">
+        <div className="flex items-center gap-3 p-3 bg-gray-950">
           <i class=" text-red-500"><FaShieldAlt size={28} /></i>
           <div>
             <h5 class=" text-white">Brand Warranty</h5>
             <p class="text-gray-500">100% Original products</p>
           </div>
         </div>
-        <div className=" flex items-center gap-3 p-3 bg-black">
+        <div className=" flex items-center gap-3 p-3 bg-gray-950">
           <i className="text-red-500 "><FaTags size={28} /></i>
           <div>
             <h5 className=" text-white">Exciting Deals</h5>
             <p className="text-gray-500">On all prepaid orders</p>
           </div>
         </div>
-        <div className="flex items-center gap-3 p-3 bg-black">
+        <div className="flex items-center gap-3 p-3 bg-gray-950">
           <i className="text-red-500"><FaRegCreditCard size={28} /></i>
           <div>
             <h5 className="text-white">Secure Payments</h5>

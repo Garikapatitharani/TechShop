@@ -56,7 +56,7 @@ export default function AllProducts() {
   return (
     <div className="bg-black min-h-screen p-6 flex">
       {/* ===== Left Sidebar ===== */}
-      <div className="w-68 bg-[#111] text-white p-4 rounded-lg mr-4">
+      <div className="w-68 h-50 bg-[#111] text-white p-4 rounded-lg mr-4">
 
         <div className="pt-4 ">
           <h2 className="font-bold mb-2">Sort By</h2>
