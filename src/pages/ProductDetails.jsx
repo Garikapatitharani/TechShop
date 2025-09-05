@@ -1,10 +1,10 @@
 import { useParams } from "react-router-dom";
 import { useProducts } from "../contextAPI/ProductsContext";
-import { FaStar } from "react-icons/fa";
 import { useDispatch } from "react-redux";
 import { addToCart } from "../rtk-store/cartSlice";
 import { useEffect, useState } from "react";
 import { FaRegCircleUser } from 'react-icons/fa6'
+import { FaStar, FaTags, FaTruck, FaShieldAlt, FaRegCreditCard } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 export default function ProductDetails() {
@@ -105,9 +105,8 @@ export default function ProductDetails() {
           </div>
           <hr />
           <button
-            onClick={()=> handleAddToCart(product)}
-            className={`px-6 py-2 mt-2 sm:mt-6 w-full sm:w-2/3 md:w-1/2 rounded-lg transition-colors ${
-              addedItems [product.id] ? "bg-green-600 text-white hover:bg-green-700" : "bg-red-500 text-white "
+            onClick={() => handleAddToCart(product)}
+            className={`px-6 py-2 mt-2 sm:mt-6 w-full sm:w-2/3 md:w-1/2 rounded-lg transition-colors ${addedItems[product.id] ? "bg-green-600 text-white hover:bg-green-700" : "bg-red-500 text-white "
               }`}
           >
             {addedItems[product.id] ? "Added" : "Add to Cart"}
@@ -265,6 +264,11 @@ export default function ProductDetails() {
                     alt={related.title}
                     className="w-full h-32 sm:h-40  object-contain"
                   />
+                  <div className="flex items-center gap-1 mt-2">
+                    {Array.from({ length: Math.round(product.rateCount || 0) }).map((_, i) => (
+                      <FaStar key={i} className="text-red-500" />
+                    ))}
+                  </div>
                   <h3 className="text-base text-white sm:text-lg font-semibold mt-2">{related.title}</h3>
                 </Link>
                 <p className="text-gray-400 text-sm sm:text-base">{related.info}</p>
@@ -272,8 +276,8 @@ export default function ProductDetails() {
                 <p className="text-white font-bold text-2xl mt-1">₹{related.finalPrice}
                   <span className="text-gray-500 text-sm sm:text-xl ml-2 line-through">₹{related.originalPrice}</span> </p>
                 <button
-                  onClick={()=> handleAddToCart(related)}
-                  className={`px-6 py-2 mt-2 sm:mt-6 w-full sm:w-2/3 md:w-1/2 rounded-lg transition-colors ${addedItems [related.id] ? "bg-green-600 text-white hover:bg-green-700" : "bg-red-500 text-white "
+                  onClick={() => handleAddToCart(related)}
+                  className={`px-6 py-2 mt-2 sm:mt-6 w-full sm:w-2/3 md:w-1/2 rounded-lg transition-colors ${addedItems[related.id] ? "bg-green-600 text-white hover:bg-green-700" : "bg-red-500 text-white "
                     }text-white`}
                 >
                   {addedItems[related.id] ? "Added" : "Add to Cart"}
@@ -282,6 +286,39 @@ export default function ProductDetails() {
             ))}
         </div>
       </div>
-    </>
-  );
+
+      {/* Advantages */}
+      <h1 className="bg-black text-white text-center mb-0 pt-5">Our Advantages</h1>
+      <div className="grid grid-cols-1 md:grid-cols-4 h-45 gap-6 bg-black " >
+        <div className=" flex items-center gap-3 p-3 bg-black" >
+          <i ><FaTruck size={28} className="text-red-500 " /></i>
+          <div>
+            <h5 className="text-white">Express Delivery</h5>
+            <p className="text-gray-500">Ships in 24 Hours</p>
+          </div>
+        </div>
+        <div className="flex items-center gap-3 p-3 bg-black">
+          <i class=" text-red-500"><FaShieldAlt size={28} /></i>
+          <div>
+            <h5 class=" text-white">Brand Warranty</h5>
+            <p class="text-gray-500">100% Original products</p>
+          </div>
+        </div>
+        <div className=" flex items-center gap-3 p-3 bg-black">
+          <i className="text-red-500 "><FaTags size={28} /></i>
+          <div>
+            <h5 className=" text-white">Exciting Deals</h5>
+            <p className="text-gray-500">On all prepaid orders</p>
+          </div>
+        </div>
+        <div className="flex items-center gap-3 p-3 bg-black">
+          <i className="text-red-500"><FaRegCreditCard size={28} /></i>
+          <div>
+            <h5 className="text-white">Secure Payments</h5>
+            <p className="text-gray-500">SSL/Secure certificate </p>
+          </div>
+        </div>
+        </div>
+      </>
+      );
 }

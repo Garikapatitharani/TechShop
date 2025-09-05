@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { FaStar } from "react-icons/fa";
+import { FaStar, FaTags, FaTruck, FaShieldAlt, FaRegCreditCard } from "react-icons/fa";
 import productsData from "../contextAPI/ProductsData.js";
 import { addToCart } from "../rtk-store/cartSlice";
 import { useDispatch } from "react-redux";
@@ -56,12 +56,12 @@ export default function AllProducts() {
   return (
     <div className="bg-black min-h-screen p-6 flex">
       {/* ===== Left Sidebar ===== */}
-      <div className="w-64 bg-[#111] text-white p-4 rounded-lg mr-6">
+      <div className="w-68 bg-[#111] text-white p-4 rounded-lg mr-4">
 
-        <div className="pt-4">
+        <div className="pt-4 ">
           <h2 className="font-bold mb-2">Sort By</h2>
           <hr className="mb-2" />
-          <ul className="space-y-1 text-gray-300">
+          <ul className="space-y-1 -mx-7 text-gray-300">
             <li
               className={`cursor-pointer hover:text-red-500 ${sortOption === "Latest" ? "text-red-500" : ""}`}
               onClick={() => setSortOption("Latest")}
@@ -196,6 +196,38 @@ export default function AllProducts() {
             </Link>
           ))}
         </div>
+
+              <h1 className="bg-black text-white text-center mb-0 pt-5">Our Advantages</h1>
+              <div className="grid grid-cols-1 md:grid-cols-4 h-45 gap-6 bg-black " >
+                <div className=" flex items-center gap-3 p-3 bg-black" >
+                  <i ><FaTruck size={28} className="text-red-500 " /></i>
+                  <div>
+                    <h5 className="text-white">Express Delivery</h5>
+                    <p className="text-gray-500">Ships in 24 Hours</p>
+                  </div>
+                </div>
+                <div className="flex items-center gap-3 p-3 bg-black">
+                  <i class=" text-red-500"><FaShieldAlt size={28} /></i>
+                  <div>
+                    <h5 class=" text-white">Brand Warranty</h5>
+                    <p class="text-gray-500">100% Original products</p>
+                  </div>
+                </div>
+                <div className=" flex items-center gap-3 p-3 bg-black">
+                  <i className="text-red-500 "><FaTags size={28} /></i>
+                  <div>
+                    <h5 className=" text-white">Exciting Deals</h5>
+                    <p className="text-gray-500">On all prepaid orders</p>
+                  </div>
+                </div>
+                <div className="flex items-center gap-3 p-3 bg-black">
+                  <i className="text-red-500"><FaRegCreditCard size={28} /></i>
+                  <div>
+                    <h5 className="text-white">Secure Payments</h5>
+                    <p className="text-gray-500">SSL/Secure certificate </p>
+                  </div>
+                </div>
+                </div>
       </div>
     </div>
   );

@@ -6,10 +6,10 @@ import { useDispatch } from "react-redux";
 import { useState, useEffect } from "react";
 
 
+
 export default function Home() {
   const dispatch = useDispatch();
   const [added, setAdded] = useState(false);
-
 
   const featuredProducts = productsData.slice(0, 5);
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -34,8 +34,6 @@ export default function Home() {
     return visible;
   };
 
-
-
   const handleAddToCart = (product) => {
     dispatch(addToCart(product));
     setAdded(product.id);
@@ -45,10 +43,24 @@ export default function Home() {
   return (
     <>
       <div id="carouselExampleIndicators" className="position-sticky carousel slide" data-bs-ride="carousel" data-bs-interval="2000">
-        <div className="carousel-indicators">
-          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" className="active" aria-current="true" aria-label="Slide 1"></button>
-          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        <style>
+          {`
+            .carousel-indicators [data-bs-target] {
+              width: 12px;
+              height: 12px;
+              border-radius: 50%;
+              background-color: white; /* light red for inactive */
+            }
+            .carousel-indicators .active {
+              background-color: red !important; /* solid red for active */
+            }
+          `}
+        </style>
+        
+        <div className="carousel-indicators ">
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" className="active " aria-current="true" aria-label="Slide 1" ></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2" ></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3" >         </button>
         </div>
 
         <div className="carousel-inner bg-black pt-6 min-h-[400px]">
@@ -174,7 +186,7 @@ export default function Home() {
           <li><Link to='/earphones' className="hover:bg-red-500 text-white no-underline rounded p-2">Earphones</Link></li>
           <li><Link to='/neckbands' className="hover:bg-red-500 text-white no-underline rounded p-2">Neckbands</Link></li>
         </ul>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6 p-6 bg-black">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 p-6 bg-black">
           {productsData.slice(0, 11).map((product) => (
             <Link
               key={product.id}
@@ -226,8 +238,8 @@ export default function Home() {
 
       {/* Advantages */}
 
-      <h1 className="bg-black text-white text-center mb-0 pt-4">Our Advantages</h1>
-      <div className="grid grid-cols-1 md:grid-cols-4 h-40 gap-6 bg-black " >
+      <h1 className="bg-black text-white text-center mb-0 pt-5">Our Advantages</h1>
+      <div className="grid grid-cols-1 md:grid-cols-4 h-45 gap-6 bg-black " >
         <div className=" flex items-center gap-3 p-3 bg-black" >
           <i ><FaTruck size={28} className="text-red-500 " /></i>
           <div>
