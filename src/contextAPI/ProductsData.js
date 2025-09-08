@@ -5,10 +5,10 @@ const productsData = [
         tagline: "Keep the noise out, or in. You choose.",
         heroImage: "/products/jbl660nc-1.png",
         images: [
-            "/public/products/jbl660nc-1.png",
-            "/public/products/jbl660nc-2.png",
-            "/public/products/jbl660nc-3.png",
-            "/public/products/jbl660nc-4.png",
+            "/products/jbl660nc-1.png",
+            "/products/jbl660nc-2.png",
+            "/products/jbl660nc-3.png",
+            "/products/jbl660nc-4.png",
         ],
         brand: "JBL",
         title: "JBL Live 660NC",
@@ -27,10 +27,10 @@ const productsData = [
         id: 2,
         tag: "featured-product",
         images: [
-            "/public/products/boat518-1.png",
-            "/public/products/boat518-2.png",
-            "/public/products/boat518-3.png",
-            "/public/products/boat518-4.png"
+            "/products/boat518-1.png",
+            "/products/boat518-2.png",
+            "/products/boat518-3.png",
+            "/products/boat518-4.png"
         ],
         brand: "boAt",
         title: "boAt Rockerz 518",
@@ -51,10 +51,10 @@ const productsData = [
         tagline: "Featherweight for comfort all-day.",
         heroImage: "/images/products/boat131-3.png",
         images: [
-            "/public/products/boat131-1.png",
-            "/public/products/boat131-2.png",
-            "/public/products/boat131-3.png",
-            "/public/products/boat131-4.png",
+            "/products/boat131-1.png",
+            "/products/boat131-2.png",
+            "/products/boat131-3.png",
+            "/products/boat131-4.png",
         ],
         brand: "boAt",
         title: "boAt Airdopes 131",
@@ -72,10 +72,10 @@ const productsData = [
     {
         id: 4,
         images: [
-            "/public/products/boat110-1.png",
-            "/public/products/boat110-2.png",
-            "/public/products/boat110-3.png",
-            "/public/products/boat110-4.png",
+            "/products/boat110-1.png",
+            "/products/boat110-2.png",
+            "/products/boat110-3.png",
+            "/products/boat110-4.png",
         ],
         brand: "boAt",
         title: "boAt BassHeads 110",
@@ -93,10 +93,10 @@ const productsData = [
     {
         id: 5,
         images: [
-            "/public/products/boat410-1.png",
-            "/public/products/boat410-2.png",
-            "/public/products/boat410-3.png",
-            "/public/products/boat410-4.png",
+            "/products/boat410-1.png",
+            "/products/boat410-2.png",
+            "/products/boat410-3.png",
+            "/products/boat410-4.png",
         ],
         brand: "boAt",
         title: "boAt Rockerz 410",
@@ -114,10 +114,10 @@ const productsData = [
     {
         id: 6,
         images: [
-            "/public/products/jbl200bt-1.png",
-            "/public/products/jbl200bt-2.png",
-            "/public/products/jbl200bt-3.png",
-            "/public/products/jbl200bt-4.png",
+            "/products/jbl200bt-1.png",
+            "/products/jbl200bt-2.png",
+            "/products/jbl200bt-3.png",
+            "/products/jbl200bt-4.png",
         ],
         brand: "JBL",
         title: "JBL Live 200BT",
@@ -138,10 +138,10 @@ const productsData = [
         tagline: "Give your favourite music a boost.",
         heroImage: "/products/sonyxb910n-1.png",
         images: [
-            "/public/products/sonyxb910n-1.png",
-            "/public/products/sonyxb910n-2.png",
-            "/public/products/sonyxb910n-3.png",
-            "/public/products/sonyxb910n-4.png",
+            "/products/sonyxb910n-1.png",
+            "/products/sonyxb910n-2.png",
+            "/products/sonyxb910n-3.png",
+            "/products/sonyxb910n-4.png",
         ],
         brand: "Sony",
         title: "Sony WH-XB910N",
@@ -160,10 +160,10 @@ const productsData = [
         id: 8,
         tag: "featured-product",
         images: [
-            "/public/products/jbl760nc-1.png",
-            "/public/products/jbl760nc-2.png",
-            "/public/products/jbl760nc-3.png",
-            "/public/products/jbl760nc-4.png",
+            "/products/jbl760nc-1.png",
+            "/products/jbl760nc-2.png",
+            "/products/jbl760nc-3.png",
+            "/products/jbl760nc-4.png",
         ],
         brand: "JBL",
         title: "JBL Tune 760NC",
@@ -182,10 +182,10 @@ const productsData = [
         id: 9,
         tag: "featured-product",
         images: [
-            "/public/products/boat255r-1.png",
-            "/public/products/boat255r-2.png",
-            "/public/products/boat255r-3.png",
-            "/public/products/boat255r-4.png",
+            "/products/boat255r-1.png",
+            "/products/boat255r-2.png",
+            "/products/boat255r-3.png",
+            "/products/boat255r-4.png",
         ],
         brand: "boAt",
         title: "boAt Rockerz 255",
@@ -203,10 +203,10 @@ const productsData = [
     {
         id: 10,
         images: [
-            "/public/products/jbl100-1.png",
-            "/public/products/jbl100-2.png",
-            "/public/products/jbl100-3.png",
-            "/public/products/jbl100-4.png",
+            "/products/jbl100-1.png",
+            "/products/jbl100-2.png",
+            "/products/jbl100-3.png",
+            "/products/jbl100-4.png",
         ],
         brand: "JBL",
         title: "JBL Wave 100",
@@ -224,10 +224,10 @@ const productsData = [
     {
         id: 11,
         images: [
-            "/public/products/sony1000xm4-1.png",
-            "/public/products/sony1000xm4-2.png",
-            "/public/products/sony1000xm4-3.png",
-            "/public/products/sony1000xm4-4.png"
+            "/products/sony1000xm4-1.png",
+            "/products/sony1000xm4-2.png",
+            "/products/sony1000xm4-3.png",
+            "/products/sony1000xm4-4.png"
         ],
         brand: "Sony",
         title: "Sony WF-1000XM4",
@@ -245,10 +245,10 @@ const productsData = [
     {
         id: 12,
         images: [
-            "/public/products/boat228-1.png",
-            "/public/products/boat228-2.png",
-            "/public/products/boat228-3.png",
-            "/public/products/boat228-4.png",
+            "/products/boat228-1.png",
+            "/products/boat228-2.png",
+            "/products/boat228-3.png",
+            "/products/boat228-4.png",
         ],
         brand: "boAt",
         title: "boAt BassHeads 228",
@@ -267,10 +267,10 @@ const productsData = [
         id: 13,
         tag: "featured-product",
         images: [
-            "/public/products/jbl-endu-1.png",
-            "/public/products/jbl-endu-2.png",
-            "/public/products/jbl-endu-3.png",
-            "/public/products/jbl-endu-4.png",
+            "/products/jbl-endu-1.png",
+            "/products/jbl-endu-2.png",
+            "/products/jbl-endu-3.png",
+            "/products/jbl-endu-4.png",
         ],
         brand: "JBL",
         title: "JBL Endurance Run Sports",
@@ -289,10 +289,10 @@ const productsData = [
         id: 14,
         tag: "featured-product",
         images: [
-            "/public/products/boat203-1.png",
-            "/public/products/boat203-2.png",
-            "/public/products/boat203-3.png",
-            "/public/products/boat203-4.png",
+            "/products/boat203-1.png",
+            "/products/boat203-2.png",
+            "/products/boat203-3.png",
+            "/products/boat203-4.png",
         ],
         brand: "boAt",
         title: "boAt Airdopes 203",
@@ -310,10 +310,10 @@ const productsData = [
     {
         id: 15,
         images: [
-            "/public/products/sonych710n-1.png",
-            "/public/products/sonych710n-2.png",
-            "/public/products/sonych710n-3.png",
-            "/public/products/sonych710n-4.png",
+            "/products/sonych710n-1.png",
+            "/products/sonych710n-2.png",
+            "/products/sonych710n-3.png",
+            "/products/sonych710n-4.png",
         ],
         brand: "Sony",
         title: "Sony WH-CH710N",
@@ -331,10 +331,10 @@ const productsData = [
     {
         id: 16,
         images: [
-            "/public/products/jbl500bt-1.png",
-            "/public/products/jbl500bt-2.png",
-            "/public/products/jbl500bt-3.png",
-            "/public/products/jbl500bt-4.png",
+            "/products/jbl500bt-1.png",
+            "/products/jbl500bt-2.png",
+            "/products/jbl500bt-3.png",
+            "/products/jbl500bt-4.png",
         ],
         brand: "JBL",
         title: "JBL Tune 500BT",
@@ -352,10 +352,10 @@ const productsData = [
     {
         id: 17,
         images: [
-            "/public/products/boat381-1.png",
-            "/public/products/boat381-2.png",
-            "/public/products/boat381-3.png",
-            "/public/products/boat381-4.png",
+            "/products/boat381-1.png",
+            "/products/boat381-2.png",
+            "/products/boat381-3.png",
+            "/products/boat381-4.png",
         ],
         brand: "boAt",
         title: "boAt Airdopes 381",
@@ -373,10 +373,10 @@ const productsData = [
     {
         id: 18,
         images: [
-            "/public/products/sony-ex14ap-1.png",
-            "/public/products/sony-ex14ap-2.png",
-            "/public/products/sony-ex14ap-3.png",
-            "/public/products/sony-ex14ap-4.png"
+            "/products/sony-ex14ap-1.png",
+            "/products/sony-ex14ap-2.png",
+            "/products/sony-ex14ap-3.png",
+            "/products/sony-ex14ap-4.png"
         ],
         brand: "Sony",
         title: "Sony MDR-EX14AP",
@@ -394,10 +394,10 @@ const productsData = [
     {
         id: 19,
         images: [
-            "/public/products/sonyxb400-1.png",
-            "/public/products/sonyxb400-2.png",
-            "/public/products/sonyxb400-3.png",
-            "/public/products/sonyxb400-4.png",
+            "/products/sonyxb400-1.png",
+            "/products/sonyxb400-2.png",
+            "/products/sonyxb400-3.png",
+            "/products/sonyxb400-4.png",
         ],
         brand: "Sony",
         title: "Sony WI-XB400",
@@ -415,3 +415,4 @@ const productsData = [
 ];
 
 export default productsData;
+
