@@ -4,6 +4,11 @@ import productsData from "../contextAPI/ProductsData.js";
 import { addToCart } from "../rtk-store/cartSlice";
 import { useDispatch } from "react-redux";
 import { useState, useEffect } from "react";
+import sonyxb910n from '../assets/sonyXb910n-1.png'
+import jbl500bt from "../assets/jbl500bt-1.png"
+import boat131_3 from '../assets/boat131-3.png'
+
+
 
 
 
@@ -60,7 +65,7 @@ export default function Home() {
         <div className="carousel-indicators ">
           <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" className="active " aria-current="true" aria-label="Slide 1" ></button>
           <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2" ></button>
-          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3" >         </button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3" ></button>
         </div>
 
         <div className="carousel-inner bg-black pt-6 min-h-[400px]">
@@ -77,7 +82,7 @@ export default function Home() {
                 </Link>
               </div>
               <div className="image-section flex justify-center">
-                <img src="/products/sonyXb910n-1.png" className="h-90 w-100 px-2 " alt="sony" />
+                <img src={sonyxb910n} className="h-90 w-100 px-2 " alt="sony" />
               </div>
             </div>
           </div>
@@ -94,7 +99,7 @@ export default function Home() {
                 </Link>
               </div>
               <div className="image-section flex justify-center">
-                <img src="/products/jbl500bt-2.png" className="h-90 w-100  px-2" alt="JBL" />
+                <img src={jbl500bt} className="h-90 w-100  px-2" alt="JBL" />
               </div>
             </div>
           </div>
@@ -111,7 +116,7 @@ export default function Home() {
                 </Link>
               </div>
               <div className="image-section flex justify-center">
-                <img src="/products/boat131-3.png" className="h-90 w-100 px-2" alt="Airdopes" />
+                <img src={boat131_3} className="h-90 w-100 px-2" alt="Airdopes" />
               </div>
             </div>
           </div>
