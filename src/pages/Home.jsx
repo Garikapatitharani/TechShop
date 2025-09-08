@@ -9,9 +9,6 @@ import jbl500bt from "../assets/jbl500bt-1.png"
 import boat131_3 from '../assets/boat131-3.png'
 
 
-
-
-
 export default function Home() {
   const dispatch = useDispatch();
   const [added, setAdded] = useState(false);
@@ -47,6 +44,7 @@ export default function Home() {
 
   return (
     <>
+    {/* carousel */}
       <div id="carouselExampleIndicators" className="position-sticky carousel slide" data-bs-ride="carousel" data-bs-interval="2000">
         <style>
           {`
@@ -136,7 +134,6 @@ export default function Home() {
 
 
       {/* Featured Products */}
-      <>
         <h1 className="text-center bg-black text-white mb-0 pt-8">
           Featured Products
         </h1>
@@ -178,7 +175,6 @@ export default function Home() {
             })}
           </div>
         </div>
-      </>
 
 
       {/* Products */}
@@ -242,7 +238,6 @@ export default function Home() {
 
 
       {/* Advantages */}
-
       <h1 className="bg-gray-950 text-white text-center mb-0  pt-8">Our Advantages</h1>
       <div className="grid grid-cols-1 md:grid-cols-4 h-45 gap-6 bg-gray-950 " >
         <div className=" flex items-center gap-3 p-3 bg-gray-950" >

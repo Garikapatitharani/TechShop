@@ -277,7 +277,8 @@ export default function ProductDetails() {
                   <span className="text-gray-500 text-sm sm:text-xl ml-2 line-through">₹{related.originalPrice}</span> </p>
                 <button
                   onClick={() => handleAddToCart(related)}
-                  className={`px-6 py-2 mt-2 sm:mt-6 w-full sm:w-2/3 md:w-1/2 rounded-lg transition-colors ${addedItems[related.id] ? "bg-green-600 text-white hover:bg-green-700" : "bg-red-500 text-white "
+                  className={`px-6 py-2 mt-2 sm:mt-6 w-full sm:w-2/3 md:w-1/2 rounded-lg transition-colors 
+                    ${addedItems[related.id] ? "bg-green-600 text-white hover:bg-green-700" : "bg-red-500 text-white "
                     }text-white`}
                 >
                   {addedItems[related.id] ? "Added" : "Add to Cart"}

@@ -55,7 +55,7 @@ export default function AllProducts() {
 
   return (
     <div className="bg-black min-h-screen p-6 flex">
-      {/* ===== Left Sidebar ===== */}
+      {/* Left Sidebar  */}
       <div className="w-68 h-50 bg-[#111] text-white p-4 rounded-lg mr-4">
 
         <div className="pt-4 ">
@@ -192,42 +192,50 @@ export default function AllProducts() {
                   ({product.rateCount})
                 </span>
               </div>
-              <button className="bg-red-500 text-white p-2 mt-2 " onClick={() => dispatch(addToCart(product))}>Add to Cart</button>
+              <button
+                onClick={() => handleAddToCart(related)}
+                className={`px-6 py-2 mt-2 sm:mt-6 w-full sm:w-2/3 md:w-1/2 rounded-lg transition-colors 
+                    ${addedItems[related.id] ? "bg-green-600 text-white hover:bg-green-700" : "bg-red-500 text-white "
+                  }text-white`}
+              >
+                {addedItems[related.id] ? "Added" : "Add to Cart"}
+              </button>
             </Link>
+
           ))}
         </div>
 
-              <h1 className="bg-black text-white text-center mb-0 pt-5">Our Advantages</h1>
-              <div className="grid grid-cols-1 md:grid-cols-4 h-45 gap-6 bg-black " >
-                <div className=" flex items-center gap-3 p-3 bg-black" >
-                  <i ><FaTruck size={28} className="text-red-500 " /></i>
-                  <div>
-                    <h5 className="text-white">Express Delivery</h5>
-                    <p className="text-gray-500">Ships in 24 Hours</p>
-                  </div>
-                </div>
-                <div className="flex items-center gap-3 p-3 bg-black">
-                  <i class=" text-red-500"><FaShieldAlt size={28} /></i>
-                  <div>
-                    <h5 class=" text-white">Brand Warranty</h5>
-                    <p class="text-gray-500">100% Original products</p>
-                  </div>
-                </div>
-                <div className=" flex items-center gap-3 p-3 bg-black">
-                  <i className="text-red-500 "><FaTags size={28} /></i>
-                  <div>
-                    <h5 className=" text-white">Exciting Deals</h5>
-                    <p className="text-gray-500">On all prepaid orders</p>
-                  </div>
-                </div>
-                <div className="flex items-center gap-3 p-3 bg-black">
-                  <i className="text-red-500"><FaRegCreditCard size={28} /></i>
-                  <div>
-                    <h5 className="text-white">Secure Payments</h5>
-                    <p className="text-gray-500">SSL/Secure certificate </p>
-                  </div>
-                </div>
-                </div>
+        <h1 className="bg-black text-white text-center mb-0 pt-5">Our Advantages</h1>
+        <div className="grid grid-cols-1 md:grid-cols-4 h-45 gap-6 bg-black " >
+          <div className=" flex items-center gap-3 p-3 bg-black" >
+            <i ><FaTruck size={28} className="text-red-500 " /></i>
+            <div>
+              <h5 className="text-white">Express Delivery</h5>
+              <p className="text-gray-500">Ships in 24 Hours</p>
+            </div>
+          </div>
+          <div className="flex items-center gap-3 p-3 bg-black">
+            <i class=" text-red-500"><FaShieldAlt size={28} /></i>
+            <div>
+              <h5 class=" text-white">Brand Warranty</h5>
+              <p class="text-gray-500">100% Original products</p>
+            </div>
+          </div>
+          <div className=" flex items-center gap-3 p-3 bg-black">
+            <i className="text-red-500 "><FaTags size={28} /></i>
+            <div>
+              <h5 className=" text-white">Exciting Deals</h5>
+              <p className="text-gray-500">On all prepaid orders</p>
+            </div>
+          </div>
+          <div className="flex items-center gap-3 p-3 bg-black">
+            <i className="text-red-500"><FaRegCreditCard size={28} /></i>
+            <div>
+              <h5 className="text-white">Secure Payments</h5>
+              <p className="text-gray-500">SSL/Secure certificate </p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );
