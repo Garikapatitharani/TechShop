@@ -51,7 +51,25 @@ export default function AllProducts() {
       default:
         return b.id - a.id;
     }
+
+
+
+
+    
   });
+
+  
+  const [addedItems, setAddedItems] = useState({});
+
+  
+  const handleAddToCart = (prod) => {
+    dispatch(addToCart(prod));
+    setAddedItems((prev) => ({ ...prev, [prod.id]: true }));
+
+    setTimeout(() => {
+      setAddedItems((prev) => ({ ...prev, [prod.id]: false }));
+    }, 1500);
+  };
 
   return (
     <div className="bg-black min-h-screen p-6 flex">
@@ -193,12 +211,12 @@ export default function AllProducts() {
                 </span>
               </div>
               <button
-                onClick={() => handleAddToCart(related)}
-                className={`px-6 py-2 mt-2 sm:mt-6 w-full sm:w-2/3 md:w-1/2 rounded-lg transition-colors 
-                    ${addedItems[related.id] ? "bg-green-600 text-white hover:bg-green-700" : "bg-red-500 text-white "
+                onClick={() => handleAddToCart(product)}
+                className={`px-1 py-2 mt-2 sm:mt-6 w-full sm:w-2/3 md:w-1/2 rounded-lg transition-colors 
+                    ${addedItems[product.id] ? "bg-green-600 text-white hover:bg-green-700" : "bg-red-500 text-white "
                   }text-white`}
               >
-                {addedItems[related.id] ? "Added" : "Add to Cart"}
+                {addedItems[product.id] ? "Added" : "Add to Cart"}
               </button>
             </Link>
 
