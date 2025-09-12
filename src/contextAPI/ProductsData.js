@@ -54,7 +54,7 @@ import boat203 from "../assets/boat203-1.png"
 import boat203_2 from "../assets/boat203-2.png"
 import boat203_3 from "../assets/boat203-3.png"
 import boat203_4 from "../assets/boat203-4.png"
-import sony from "../assets/sonych710n-1.png"
+import sonych710n from "../assets/sonych710n-1.png";
 import sonych710n_2 from "../assets/sonych710n-2.png"
 import sonych710n_3 from "../assets/sonych710n-3.png"
 import sonych710n_4 from "../assets/sonych710n-4.png"
@@ -410,10 +410,10 @@ const data = [
     },
     {
         id: 15,
-        image:sony,
-        heroImage:sony,
+        image:sonych710n,
+        heroImage:sonych710n,
         images: [
-            sony,
+            sonych710n,
             sonych710n_2,
             sonych710n_3,
             sonych710n_4,
