@@ -13,7 +13,7 @@ import boat131_4 from '../assets/boat131-4.png'
 import boat110 from '../assets/boat110-1.png'
 import boat110_2 from '../assets/boat110-2.png'
 import boat110_3 from '../assets/boat110-3.png'
-import boat110_4 from '../assets/boat110-3.png'
+import boat110_4 from '../assets/boat110-4.png'
 import boat410 from '../assets/boat410-1.png'
 import boat410_2 from '../assets/boat410-2.png'
 import boat410_3 from '../assets/boat410-3.png'
@@ -54,10 +54,10 @@ import boat203 from "../assets/boat203-1.png"
 import boat203_2 from "../assets/boat203-2.png"
 import boat203_3 from "../assets/boat203-3.png"
 import boat203_4 from "../assets/boat203-4.png"
-import sonych710n from "../assets/sonych710n-1.png";
-import sonych710n_2 from "../assets/sonych710n-2.png"
-import sonych710n_3 from "../assets/sonych710n-3.png"
-import sonych710n_4 from "../assets/sonych710n-4.png"
+import sonych710n from "../assets/sonyCh710n-1.png";
+import sonych710n_2 from "../assets/sonyCh710n-2.png"
+import sonych710n_3 from "../assets/sonyCh710n-3.png"
+import sonych710n_4 from "../assets/sonyCh710n-4.png"
 import jbl500bt from "../assets/jbl500bt-1.png"
 import jbl500bt_2 from "../assets/jbl500bt-2.png"
 import jbl500bt_3 from "../assets/jbl500bt-3.png"
