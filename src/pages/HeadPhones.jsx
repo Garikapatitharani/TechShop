@@ -10,7 +10,7 @@ export default function HeadPhones(){
 
   return(
     <>
-      <div className="grid grid-cols-1 bg-black sm:grid-cols-2 md:grid-cols-4 gap-6 p-6">
+      <div className="grid grid-cols-1 bg-black sm:grid-cols-2 md:grid-cols-4 gap-6 mt-12 p-6">
         {headphones.map((item)=>(
            <ProductCard key={item.id} product={item} />
         ))}

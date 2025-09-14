@@ -22,10 +22,10 @@ import jbl200bt from '../assets/jbl200bt-1.png'
 import jbl200bt_2 from '../assets/jbl200bt-2.png'
 import jbl200bt_3 from '../assets/jbl200bt-3.png'
 import jbl200bt_4 from '../assets/jbl200bt-4.png'
-import sonyxb910n from '../assets/sonyXb910n-1.png'
-import sonyxb910n_2 from '../assets/sonyXb910n-2.png'
-import sonyxb910n_3 from '../assets/sonyXb910n-3.png'
-import sonyxb910n_4 from '../assets/sonyXb910n-4.png'
+import sonyXb910n from '../assets/sonyXb910n-1.png'
+import sonyXb910n_2 from '../assets/sonyXb910n-2.png'
+import sonyXb910n_3 from '../assets/sonyXb910n-3.png'
+import sonyXb910n_4 from '../assets/sonyXb910n-4.png'
 import jbl760nc from "../assets/jbl760nc-1.png"
 import jbl760nc_2 from "../assets/jbl760nc-2.png"
 import jbl760nc_3 from "../assets/jbl760nc-3.png"
@@ -54,10 +54,10 @@ import boat203 from "../assets/boat203-1.png"
 import boat203_2 from "../assets/boat203-2.png"
 import boat203_3 from "../assets/boat203-3.png"
 import boat203_4 from "../assets/boat203-4.png"
-import sonych710n from "../assets/sonyCh710n-1.png";
-import sonych710n_2 from "../assets/sonyCh710n-2.png"
-import sonych710n_3 from "../assets/sonyCh710n-3.png"
-import sonych710n_4 from "../assets/sonyCh710n-4.png"
+import sonych710n from "../assets/sonych710n-1.png";
+import sonych710n_2 from "../assets/sonych710n-2.png"
+import sonych710n_3 from "../assets/sonych710n-3.png"
+import sonych710n_4 from "../assets/sonych710n-4.png"
 import jbl500bt from "../assets/jbl500bt-1.png"
 import jbl500bt_2 from "../assets/jbl500bt-2.png"
 import jbl500bt_3 from "../assets/jbl500bt-3.png"
@@ -221,14 +221,14 @@ const data = [
     {
         id: 7,
         tag: "hero-product",
-        image:sonyxb910n,
+        image:sonyXb910n,
         tagline: "Give your favourite music a boost.",
-        heroImage: sonyxb910n,
+        heroImage: sonyXb910n,
         images: [
-            sonyxb910n,
-            sonyxb910n_2,
-            sonyxb910n_3,
-            sonyxb910n_4,
+            sonyXb910n,
+            sonyXb910n_2,
+            sonyXb910n_3,
+            sonyXb910n_4,
         ],
         brand: "Sony",
         title: "Sony WH-XB910N",
