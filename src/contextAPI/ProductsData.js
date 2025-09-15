@@ -70,10 +70,10 @@ import sonyex14ap from"../assets/sony-ex14ap-1.png"
 import sonyex14ap_2 from"../assets/sony-ex14ap-2.png"
 import sonyex14ap_3 from"../assets/sony-ex14ap-3.png"
 import sonyex14ap_4 from"../assets/sony-ex14ap-4.png"
-import sonyxb400 from "../assets/sonyxb400-1.png"
-import sonyxb400_2 from "../assets/sonyxb400-2.png"
-import sonyxb400_3 from "../assets/sonyxb400-3.png"
-import sonyxb400_4 from "../assets/sonyxb400-4.png"
+import sonyXb400 from "../assets/sonyXb400-1.png"
+import sonyXb400_2 from "../assets/sonyXb400-2.png"
+import sonyXb400_3 from "../assets/sonyXb400-3.png"
+import sonyXb400_4 from "../assets/sonyXb400-4.png"
 const data = [
     {
         id: 1,
@@ -502,13 +502,13 @@ const data = [
     },
     {
         id: 19,
-        image:sonyxb400,
-        heroImage:sonyxb400,
+        image:sonyXb400,
+        heroImage:sonyXb400,
         images: [
-            sonyxb400,
-            sonyxb400_2,
-            sonyxb400_3,
-            sonyxb400_4,
+            sonyXb400,
+            sonyXb400_2,
+            sonyXb400_3,
+            sonyXb400_4,
         ],
         brand: "Sony",
         title: "Sony WI-XB400",
