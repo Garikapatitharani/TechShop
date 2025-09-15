@@ -4,7 +4,7 @@ import './index.css'
 import App from './App.jsx'
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
-import { BrowserRouter } from 'react-router-dom'
+import { HashRouter } from 'react-router-dom'
 import { store } from './rtk-store/store.js'
 import { Provider } from 'react-redux'
 import { ProductsProvider } from './contextAPI/ProductsContext.jsx'
@@ -12,11 +12,11 @@ import { ProductsProvider } from './contextAPI/ProductsContext.jsx'
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <Provider store={store}>
-      <BrowserRouter basename='/TechShop'>
+      <HashRouter>
         <ProductsProvider>
           <App />
         </ProductsProvider>
-      </BrowserRouter>
+      </HashRouter>
     </Provider>
   </StrictMode>,
 )
