@@ -12,7 +12,7 @@ import { ProductsProvider } from './contextAPI/ProductsContext.jsx'
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <Provider store={store}>
-      <BrowserRouter>
+      <BrowserRouter basename='/TechShop'>
         <ProductsProvider>
           <App />
         </ProductsProvider>
